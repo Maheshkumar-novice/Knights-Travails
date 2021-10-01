@@ -1,0 +1,48 @@
+Your task is to build a function knight_moves that shows the simplest possible way to get from one square to another by outputting all squares the knight will stop on along the way.
+
+So I will get two coordinates to the knight_moves method. It will show the shortest path between them.
+
+Knight will have max 8 possible moves from a coordinate. So we need to take one coordinate at a time and check it leads to the destination. If it leads then store it's path. Do it for all and find the shortest path. So we need to take one knight's possible move from the coordinate and see it leads to the destination.
+
+What are the entities?
+* Board
+  * Board-Structure Graph
+  * Shortest Path Alogrithm Between 2 board squares(coordinates) that follow knight like moves.
+
+* Knight 
+  * Initial position
+  * Knight moves from current position like creating all possible moves from the current coordinate with the overflow constraints. Every time this will be called to get the possible moves from the current square.
+
+First we need to create all possible moves from the initial coordinate.
+Take one coordinate from it and build all possible moves from there.
+If the new coordinates contains the destination then return. 
+Else take one coordinate from new coordinates and apply the same.
+Do this until all coordinates are exhausted. Store all the paths in a data structure. Return the shortest path from it. 
+
+Now let's try to implement it. Then we can look for other graph search algorithms and improve the solution.
+
+Create edge list for the init coordinate to then take one from it 
+see solution exists or create edge list for it then see solution exists there and so on.
+
+What are the things we need to do?
+
+* Board Class
+ * Attributes:
+    * Init: n to create n x n board
+    * board = n x n board
+    e.g[[0,0], [0, 1].....[7,7]]
+
+  * Methods
+    * Shortest Path Finder (start, end)
+      * Create edge list for start.
+      * See destination exists if yes return
+      * Else take one from that edge list, create edge list from it,
+      Continue till all the edges are completed in the initial edge list.
+
+* Knight Class
+  * Method
+    * get all edges from the given coordinate
+    * knight moves (coordinate1, coordinate2)
+
+
+start with board and then knight
