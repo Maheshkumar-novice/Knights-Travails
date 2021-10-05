@@ -1,0 +1,57 @@
+So I need to find the shortest path to reach the given point in the chess board from the current point. Knight moves 2 + 1 step movement.
+
+Input : 2 coordinates 1 => Start 2 => Destination
+Output: Shortest path between Start and Destination that means we need to print the shortest path from start to destination.
+Data will be from the user.
+
+Tools I can use. Graph to represent all the possible moves from all points. I can use one of the search or shortest path algorithms to find the shortest path between 2 coordinates. 
+
+So Pseudo Code.
+
+Get Start and Destination From the user.
+Build the graph with all possible moves from every point in the board. Remember knight will have 8 places to go from each point.
+Calculate the shortest path from Start to Destination from the chosen algorithm. Probably Djikstra.
+Output the result.
+
+Step 1: Get Input coordinates
+Step 2: Build The Graph
+Step 3: Calculate The Shortest path
+Step 4: Output the Result
+
+Show How the code will be organized? Board and Knight.
+What Board Will Contain? Board contains the board graph with every possible moves from all points. How to Calcluate all moves from the coordinates? Knight will contain a method for it. That will return all the moves from a given point. Knight will contain the knight_moves method which gives the shortest path between the start and the destination given.
+
+Board:
+  * Board Graph
+  * Shortest path algorithm
+
+Knight:
+  * Moves from a point
+  * Knight Moves
+
+
+Step 1: Build Board Class with Board Graph
+Step 2: Build Knight Class moves from a point 
+Step 3: Borad Class Implement Shortest Path algorithm
+Step 4: Knight Class Knight Moves
+
+Step 1: 
+  * How to Build the graph?
+  Representation of Graphs,
+  -> Adjacency matrix
+  -> Edge List
+  -> Adjacency List
+
+  Which will work best for this case?
+  In this case each point will have mutliple edges.
+  Almost all points will have edges. Let's explore Djikstra.
+
+  Adjacency List - with Hash. Every coordinate will be mapped with the possible moves from there. So we can lookup for moves and use it for Djikstra. 
+
+
+    Step 1: Create a Hash.
+    Step 2: init coordinate [0, 0]
+    Step 3: For each coordinate until [7, 7]
+      Step 4: Find possible moves and build the array.
+      Step 5: Map the coordinate with the array.
+    Now graph is ready.
