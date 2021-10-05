@@ -25,6 +25,6 @@ class Knight
   private
 
   def valid_move?(coordinate)
-    coordinate.all? { |value| value >= @min_move && value <= @max_move }
+    coordinate.all? { |value| value.between?(0, 7) }
   end
 end
