@@ -5,8 +5,8 @@
 class Knight
   def initialize
     @moves = [[2, 1], [2, -1], [1, 2], [-1, 2], [-2, 1], [-2, -1], [1, -2], [-1, -2]]
-    @min_move = 0
-    @max_move = 7
+    @min_coordinate = 0
+    @max_coordinate = 7
   end
 
   def possible_moves_from_coordinate(coordinate)
@@ -25,6 +25,6 @@ class Knight
   private
 
   def valid_move?(coordinate)
-    coordinate.all? { |value| value.between?(0, 7) }
+    coordinate.all? { |value| value.between?(@min_coordinate, @max_coordinate) }
   end
 end
