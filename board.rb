@@ -23,17 +23,20 @@ class Board
   end
 
   def find_shortest_path(start_coordinate, end_coordinate)
+    return [start_coordinate] if start_coordinate == end_coordinate
+
+    reset_container_variables_to_initial_state
     initialize_parent_cells_and_queue(start_coordinate)
 
     until @queue.empty?
       node = @queue.shift
-      return [start_coordinate] if start_coordinate == end_coordinate
-      return create_path(end_coordinate, node) if @graph[node].include?(end_coordinate)
+      break create_path(end_coordinate, node) if @graph[node].include?(end_coordinate)
 
-      update_parent_cells(node)
+      create_parent_children_mapping(node)
       update_visited_cells_and_queue(node)
     end
-    reset_variables
+
+    @path.reverse
   end
 
   private
@@ -46,7 +49,6 @@ class Board
       @path << @parent_cells[node]
       node = @parent_cells[node]
     end
-    @path.reverse
   end
 
   def initialize_parent_cells_and_queue(start_coordinate)
@@ -54,7 +56,7 @@ class Board
     @parent_cells[start_coordinate] = nil
   end
 
-  def update_parent_cells(node)
+  def create_parent_children_mapping(node)
     @graph[node].each do |child|
       @parent_cells[child] = node unless @visited_cells.include?(child)
     end
@@ -67,7 +69,7 @@ class Board
     @queue += (@graph[node])
   end
 
-  def reset_variables
+  def reset_container_variables_to_initial_state
     @parent_cells = {}
     @visited_cells = []
     @path = []

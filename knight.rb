@@ -26,7 +26,7 @@ class Knight
   end
 
   def knight_moves(start_coordinate, end_coordinate)
-    pp @board.find_shortest_path(start_coordinate, end_coordinate)
+    print_shortest_path(@board.find_shortest_path(start_coordinate, end_coordinate))
   end
 
   private
@@ -34,12 +34,11 @@ class Knight
   def valid_move?(coordinate)
     coordinate.all? { |value| value.between?(@min_coordinate, @max_coordinate) }
   end
+
+  def print_shortest_path(path)
+    path.each do |node|
+      p node
+    end
+  end
 end
 
-# Knight.new.knight_moves([0, 0], [7, 7])
-# Knight.new.knight_moves([0, 0], [0, 0])
-# Knight.new.knight_moves([3, 3], [4, 3])
-# Knight.new.knight_moves([0, 0], [1, 2])
-# Knight.new.knight_moves([0, 0], [3, 3])
-# Knight.new.knight_moves([3, 3], [0, 0])
-# Knight.new.knight_moves([0, 2], [7, 7])
