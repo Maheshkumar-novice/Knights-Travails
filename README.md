@@ -20,8 +20,6 @@
 </details>
 
 ![Demo](./assets/demo.png)
-![Demo](./assets/demo1.png)
-![Demo](./assets/demo2.png)
 
 ## Description
 > A knight in chess can move to any square on the standard 8x8 chess board from any other square on the board, given enough turns. Its basic move is two steps forward and one step to the side. It can face any direction. - The Odin Project.
