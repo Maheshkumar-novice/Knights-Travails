@@ -12,7 +12,7 @@ def print_intro
   puts color_text('Welcome To Knights Travails! Find the shortest path between source and destination!',
                   :yellow)
   puts
-  puts color_text('Enter Coordinates > (Example: 0 0)', :magenta)
+  puts color_text('Enter Coordinates > (Example: 0 0 (range: 0 to 7))', :magenta)
 end
 
 def start_and_end_coordinates
