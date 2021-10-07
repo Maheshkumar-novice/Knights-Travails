@@ -55,3 +55,6 @@ Step 1:
       Step 4: Find possible moves and build the array.
       Step 5: Map the coordinate with the array.
     Now graph is ready.
+
+
+Finally, completed. Used Breadth First Search, No Djikstra. I stored the parent of each node I'm visiting in a hash. So I can use it to print the path later.
