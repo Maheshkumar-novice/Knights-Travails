@@ -9,7 +9,7 @@ include Color
 knight = Knight.new
 
 def print_intro
-  puts color_text('Welcome To Knight Travails! Find the shortest path between Start Coordinate and End Coordinate!',
+  puts color_text('Welcome To Knights Travails! Find the shortest path between source and destination!',
                   :yellow)
   puts
   puts color_text('Enter Coordinates > (Example: 0 0)', :magenta)

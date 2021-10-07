@@ -39,7 +39,6 @@ class Knight
   end
 
   def print_shortest_path(path)
-    path.freeze
     puts path.map { |node| color_text("[#{node[0]}, #{node[1]}]", :magenta) }.join(color_text(' -> ', :red))
   end
 end
