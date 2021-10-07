@@ -38,7 +38,7 @@
 
 ## What I Learned
 * What is Graph
-* Represenations of Graph
+* Representations of a Graph
 * Graph - BFS
   
 ## Acknowledgements
