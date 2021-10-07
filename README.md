@@ -37,7 +37,7 @@
 * Ruby
 
 ## What I Learned
-* What is Graph
+* What is a Graph
 * Representations of a Graph
 * Graph - BFS
   
