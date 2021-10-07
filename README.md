@@ -26,7 +26,7 @@
 
   My task is to write code that shows the simplest possible way to get from one square (source) to another square (destination).
   
-  I used `graph` data structure to represent the board as a graph where each cell (graph vertex) is connected to the possible moves that can be taken from a `knight` in that cell. Atmost 8 places are possible moves from a cell by a knight.
+  I used the `graph` data structure to represent the board as a graph where each cell (graph vertex) is connected to the possible moves that can be taken from a `knight` in that cell. Atmost 8 places are possible moves from a cell by a knight.
   
   I used `adjacency list` to represent the `graph`.
   
