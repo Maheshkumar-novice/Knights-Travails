@@ -2,9 +2,12 @@
 # frozen_string_literal: true
 
 require_relative 'board'
+require_relative 'color'
 
 # Knight
 class Knight
+  include Color
+
   def initialize
     @moves = [[2, 1], [2, -1], [1, 2], [-1, 2], [-2, 1], [-2, -1], [1, -2], [-1, -2]]
     @min_coordinate = 0
@@ -36,9 +39,7 @@ class Knight
   end
 
   def print_shortest_path(path)
-    path.each do |node|
-      p node
-    end
+    path.freeze
+    puts path.map { |node| color_text("[#{node[0]}, #{node[1]}]", :magenta) }.join(color_text(' -> ', :red))
   end
 end
-
